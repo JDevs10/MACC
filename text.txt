@@ -1,0 +1,3 @@
+Int -> esp-> ?
+Char ->esp -> char
+-128+127 (assci)

@@ -1,0 +1,1301 @@
+﻿<!--============================================================================================================ -->
+<!--========================= 						ENTITY			 				=============================== -->
+<!--============================================================================================================ -->
+<!--	_______________________________________________________________ -->
+<!-- Caractéristiques communes aux objets methodes							 	-->
+<!--	_______________________________________________________________ -->
+<!-- Information correspondant à l'onglet administration -->
+<!ENTITY % WDAdministration '
+	P:DOMAIN |
+	P:ISCURRENT | 
+	P:ISFUTURE |
+	P:ISCHECKED | 
+	P:FREECHAR1 | 
+	P:FREECHAR2 | 
+	P:FREECHAR3 |
+	'>
+<!ENTITY % WDFeatures ' %WDAdministration;
+	P:ALIAS | 
+	P:DESCRIPTION |
+	P:ANNOTATION |
+	P:NOTE |
+	P:RELLINKEDFILE |
+	P:LINKEDFILE |
+	P:AUTHOR |
+	P:CREATEDON | 
+	P:MODIFIEDON |
+	P:GROUP |
+	L:WDLINKEDFILES |
+	L:WDCARETENDUES |
+	L:WDRENVOILINKS |
+	L:WDRENVOILINKEDOBJECTS'>
+<!ENTITY % WDFeaturesShort '
+	P:ANNOTATION | 
+	P:CONSTRAINT | 
+	P:DESCRIPTION | 
+	P:MODIFIABLE | 
+	P:NOTE | 
+	P:VISIBILITY |
+	P:FLECHE_1 |
+	P:FLECHE_2 |
+	L:WDCARETENDUES'>
+<!--	_______________________________________________________________ -->
+<!-- Caractéristiques communes aux objets du MLO								-->
+<!--	Peuvent pparaitre dans d'autrse modèles pour des raisons des dev à venir	-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDFeaturesMLO '
+	P:MODIFIABLE | 
+	P:MULTIPLICITY | 
+	S:WDSTEREOTYPE |
+	P:SHORTCUT |
+	P:SOURCE |
+	P:VISIBILITY | 
+	P:CONSTRAINT '>
+<!--	_______________________________________________________________ -->
+<!-- Caractéristiques onglet domaine de valeur									-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDDomaineValeur '
+	P:MINVALUE | 
+	P:MAXVALUE | 
+	P:DEFAULT | 
+	P:FORMAT | 
+	P:OPTIONS | 
+	P:CONSTRAINTNAME | 
+	P:ISSTABLE | 
+	P:ISCALCUL | 
+	P:ISCASE | 
+	P:ISUPPER | 
+	P:ISLOWER 
+'>
+<!--	_______________________________________________________________ -->
+<!-- Caractéristiques communes aux objets du MLR								-->
+<!--	Peuvent pparaitre dans d'autres modèles pour des raisons des dev à venir	-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDFeaturesMLR '
+	P:ATTRIBUTEPREFIX | 
+	P:CALCULATEDLENGTH | 
+	P:CALCULATEDVOL |
+	P:ESTIMATEDLENGTH | 
+	P:NBOCCUR | 
+	P:ISHISTORISABLE | 
+	P:DATATION | 
+	P:NBOCCURPRESERVED | 
+	P:ESTIMATEDVOL | 
+	P:VALIDATEDON | 
+	P:VALIDATIONAUTHOR'>
+<!--	_______________________________________________________________ -->
+<!-- Liste tout Diagram													-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDDiagram '
+	D:WDMLODIAGRAM | 
+	D:WDMLRDIAGRAM | 
+	D:WDMCDDIAGRAM | 
+	D:WDMGADIAGRAM'>
+<!--	_______________________________________________________________ -->
+<!-- Liste tout objet WD												-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDObjet '
+	O:WDRENVOI | 
+	O:WDCOMMENT | 
+	O:WDCONSTRAINT | 
+	O:WDRULE | 
+	O:WDEXTERNALVIEW | 
+	O:WDGROUPEXTERNALVIEW | 
+	O:WDDATAITEM | 
+	O:WDGENERALIZATION | 
+	O:WDRACCOURCIETENDU |
+
+	O:WDMLOATTRIBUTE |
+	O:WDMLOOPERATION | 
+	O:WDMLOPACKAGE | 
+	O:WDMLOCLASS | 
+	O:WDMLOINTERFACE | 
+	O:WDMLOACTEUROBJ | 
+	O:WDMLOUSECASE | 
+	O:WDMLOPERIODE |
+	O:WDMLOOBJETBASECLASSE | 
+	O:WDMLOASSOCIATION | 
+	O:WDMLOCOMMENTLINK | 
+	O:WDMLODEPENDENCY | 
+	O:WDMLOMESSAGEOBJ | 
+	O:WDMLOCLASSASSOLINK |
+	O:WDMLOCOLLABORATIONLINK |
+	
+	O:WDMLRTABLE | 
+	O:WDMLRINDEXATTRIBUTE | 
+	O:WDMLRPK | 
+	O:WDMLRAK | 
+	O:WDMLRFK | 
+	O:WDMLRINDEX | 
+	O:WDMLRATTRIBUTE |
+	O:WDMLRSQLVIEW | 
+	O:WDMLRMAQUETTE |
+	O:WDMLRSTORAGE |
+	O:WDMLRTABLESPACE |
+
+	O:WDMCDCONSTRAINTINTERREL | 
+	O:WDMCDENTITY | 
+	O:WDMCDRELATIONSHIP | 
+	O:WDMCDPROPERTY |
+	O:WDMCDINHERITANCE | 
+	O:WDMCDCONSTRAINTUNI | 
+	O:WDMCDCONSTRAINTSPEC |
+
+	O:WDMGAEVENT |
+	O:WDMGADECISION |
+	O:WDMGADOMAIN | 
+	O:WDMGAACTOR | 
+	O:WDMGAMESSAGE | 
+	O:WDMGAACTIVITY | 
+	O:WDMGASTATE | 
+	O:WDMGADATAVIEW | 
+	O:WDMGAPOSTE | 
+	O:WDMGAFLUX | 
+	O:WDMGAMAQUETTE'>
+<!--	_______________________________________________________________ -->
+<!-- Liste tout viewers  WD														-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDVWObjet '
+	O:WDVWMLOPACKAGE | 
+	O:WDVWMLOCLASS | 
+	O:WDVWMLOINTERFACE | 
+	O:WDVWMLOUSECASE | 
+	O:WDVWMLOACTEUROBJ | 
+	O:WDVWMLOMESSAGEOBJ | 
+	O:WDVWMLOPERIODE | 
+	O:WDVWMLOOBJETBASECLASSE | 
+	O:WDVWCOMMENT | 
+	O:WDVWCONSTRAINT | 
+	O:WDVWMLOASSOCIATION | 
+	O:WDVWMLODEPENDENCY | 
+	O:WDVWMLRTABLE | 
+	O:WDVWRULE | 
+	O:WDVWEXTERNALVIEW | 
+	O:WDVWMLRSQLVIEW | 
+	O:WDVWGROUPEXTERNALVIEW | 
+	O:WDVWMCDCONSTRAINTINTERREL | 
+	O:WDVWMCDENTITY | 
+	O:WDVWMCDRELATIONSHIP | 
+	O:WDVWMCDINHERITANCEENT | 
+	O:WDVWMCDINHERITANCEREL | 
+	O:WDVWMCDCONSTRAINTUNI | 
+	O:WDVWRENVOI | 
+	O:WDVWMGADOMAIN | 
+	O:WDVWMGADECISION | 
+	O:WDVWMGAEVENT | 
+	O:WDVWMGAACTOR | 
+	O:WDVWMGAMESSAGE | 
+	O:WDVWMGAACTIVITY | 
+	O:WDVWMGASTATE | 
+	O:WDVWMGADATAVIEW | 
+	O:WDVWMGAPOSTE | 
+	O:WDVWMGAMAQUETTE | 
+	O:WDVWDATAITEM | 
+	O:WDVWMLRMAQUETTE |
+	O:WDVWMCDCONSTRAINTSPEC'>
+<!--	_______________________________________________________________ -->
+<!-- Position viewers  WD														-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDPos '
+	P:TOP |
+	P:BOTTOM |
+	P:LEFT |
+	P:RIGHT'>
+<!--	_______________________________________________________________ -->
+<!-- Liste tout objet WD															-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDModel '
+	M:WDMCDMODEL |
+	M:WDMLRMODEL |
+	M:WDMGAMODEL |
+	M:WDMLOMODEL '>
+<!--	_______________________________________________________________ -->
+<!-- Lien	 (à completer en fonction des nouveau liens)								-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDTLink ' 
+	P:SHORTCUTTYPE | 
+	P:MODELCODE | 
+	P:MODELCREATION | 
+	P:DIAGRAMCODE | 
+	P:DIAGRAMID | 
+	P:DIAGRAMCREATION |
+	P:OBJECTCODE |
+	P:OBJECTID |
+	P:OBJECTTYPE |
+	P:LINKEDFILE |
+	P:RELLINKEDFILE | 
+	%WDModel; |
+	%WDDiagram; |
+	%WDObjet; |
+	O:WDMLOASSOEND
+'>
+<!--	_______________________________________________________________ -->
+<!-- Element Attribut commun														-->
+<!--	_______________________________________________________________ -->
+<!ENTITY % WDelement '
+	ID ID #IMPLIED 
+	NAME CDATA #REQUIRED'>
+<!ENTITY % WDelement.att '
+	%WDelement;
+	REF IDREF #IMPLIED
+	OBJ CDATA #IMPLIED'>
+<!ENTITY % WDelement.cont '
+	CONTNAME CDATA #IMPLIED
+	CONTREF NMTOKEN #IMPLIED'>
+<!ENTITY % WDelement.ol '
+	STEREOTYPE CDATA #IMPLIED'>
+<!--============================================================================================================ -->
+<!--========================= 					DTD WIN DESIGN 	 				=============================== -->
+<!--============================================================================================================ -->
+<!--	_______________________________________________________________ 
+
+  		DTD des fichiers XML générés par WIN DESIGN											
+	 _______________________________________________________________ -->
+<!ELEMENT WDMODEL (M:WDMLOMODEL | M:WDMLRMODEL | M:WDMCDMODEL | M:WDMGAMODEL)*>
+<!ATTLIST WDMODEL
+	xmlns:M CDATA #FIXED "HTTP://WWW.WIN-DESIGN.COM/XML/MODEL"
+	xmlns:D CDATA #FIXED "HTTP://WWW.WIN-DESIGN.COM/XML/DIAGRAM"
+	xmlns:S CDATA #FIXED "HTTP://WWW.WIN-DESIGN.COM/XML/STEREOTYPE"
+	xmlns:O CDATA #FIXED "HTTP://WWW.WIN-DESIGN.COM/XML/OBJET"
+	xmlns:P CDATA #FIXED "HTTP://WWW.WIN-DESIGN.COM/XML/PROPRIETE"
+	xmlns:L CDATA #FIXED "HTTP://WWW.WIN-DESIGN.COM/XML/LISTE"
+	xmlns:xlink CDATA #IMPLIED
+	xmlns CDATA #IMPLIED
+	xmlns:fo CDATA #IMPLIED
+	xmlns:UML CDATA #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!--	MLO : Modele Logique objets													-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT M:WDMLOMODEL (P:NAME | P:DESCRIPTION | P:WORKSPACE | P:AUTHOR | P:VERSION | P:FILENAME | P:ANNOTATION | P:NOTE | L:WDLINKEDFILES | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | L:WDUSERTYPES | L:WDSTEREOTYPES | L:WDOBJECTS | L:WDDIAGRAMS)*>
+<!ATTLIST M:WDMLOMODEL
+	%WDelement.att; 
+>
+<!ELEMENT D:WDMLODIAGRAM (P:DESCRIPTION | P:AUTHOR | P:ANNOTATION | P:NOTE | P:RELLINKEDFILE | P:LINKEDFILE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | P:WORKSPACE | P:VERSION | P:TYPE | L:WDVIEWERS | L:WDLINKEDFILES)*>
+<!ATTLIST D:WDMLODIAGRAM
+	%WDelement.att; 
+	TYPEDIAGRAM CDATA #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!--	MLR : Modele Logique de Données											-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT M:WDMLRMODEL (P:NAME | P:DESCRIPTION | P:WORKSPACE | P:AUTHOR | P:VERSION | P:FILENAME | P:ANNOTATION | P:NOTE | P:RELLINKEDFILE | P:LINKEDFILE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | L:WDUSERTYPES | L:WDSTEREOTYPES | L:WDOBJECTS | L:WDDIAGRAMS | L:WDLINKEDFILES)*>
+<!ATTLIST M:WDMLRMODEL
+	%WDelement.att; 
+>
+<!ELEMENT D:WDMLRDIAGRAM (P:DESCRIPTION | P:AUTHOR | P:ANNOTATION | P:NOTE | P:RELLINKEDFILE | P:LINKEDFILE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | P:WORKSPACE | P:VERSION | P:TYPE | L:WDVIEWERS | L:WDLINKEDFILES)*>
+<!ATTLIST D:WDMLRDIAGRAM
+	%WDelement.att; 
+	TYPEDIAGRAM CDATA #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!--	MCD : Modele conceptuel de Données										-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT M:WDMCDMODEL (P:NAME | P:DESCRIPTION | P:WORKSPACE | P:AUTHOR | P:VERSION | P:FILENAME | P:ANNOTATION | P:NOTE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | L:WDUSERTYPES | L:WDSTEREOTYPES | L:WDOBJECTS | L:WDDIAGRAMS | L:WDLINKEDFILES)*>
+<!ATTLIST M:WDMCDMODEL
+	%WDelement.att; 
+>
+<!ELEMENT D:WDMCDDIAGRAM (P:DESCRIPTION | P:AUTHOR | P:ANNOTATION | P:NOTE | P:RELLINKEDFILE | P:LINKEDFILE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | P:WORKSPACE | P:VERSION | P:TYPE | L:WDVIEWERS | L:WDLINKEDFILES)*>
+<!ATTLIST D:WDMCDDIAGRAM
+	%WDelement.att; 
+	TYPEDIAGRAM CDATA #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!--	MGA : Modele général d'acctivité												-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT M:WDMGAMODEL (P:NAME | P:DESCRIPTION | P:WORKSPACE | P:AUTHOR | P:VERSION | P:FILENAME | P:ANNOTATION | P:NOTE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | L:WDUSERTYPES | L:WDSTEREOTYPES | L:WDOBJECTS | L:WDDIAGRAMS | L:WDLINKEDFILES)*>
+<!ATTLIST M:WDMGAMODEL
+	%WDelement.att; 
+>
+<!ELEMENT D:WDMGADIAGRAM (P:DESCRIPTION | P:AUTHOR | P:ANNOTATION | P:NOTE | P:RELLINKEDFILE | P:LINKEDFILE | P:CREATEDON | P:MODIFIEDON | P:ISPACKAGE | P:WORKSPACE | P:VERSION | P:TYPE | L:WDVIEWERS | L:WDLINKEDFILES)*>
+<!ATTLIST D:WDMGADIAGRAM
+	%WDelement.att; 
+	TYPEDIAGRAM CDATA #REQUIRED
+>
+<!--	_______________________________________________________________ -->
+<!--	Liste des viewers														-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDVIEWERS (%WDVWObjet;)*>
+<!--	_______________________________________________________________ -->
+<!--	Liste des sous modeles														-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDDIAGRAMS (%WDDiagram;)*>
+<!--	_______________________________________________________________ -->
+<!--	Liste des stereotypes											-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDSTEREOTYPES (S:WDSTEREOTYPE)*>
+<!--	_______________________________________________________________ -->
+<!-- Liste de tous les objets											-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDOBJECTS (%WDObjet;)*>
+<!--	_______________________________________________________________ -->
+<!-- 																				-->
+<!-- 			*** OBJETS DU MCD ***												-->
+<!-- 																				-->
+<!--	_______________________________________________________________ -->
+<!--	_______________________________________________________________ -->
+<!-- ENTITE																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMCDENTITY (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMCDPROPERTIES | L:WDMCDRELATIONSHIPLINKS | L:WDSTATES)*>
+<!ATTLIST O:WDMCDENTITY
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMCDENTITY (O:WDMCDENTITY | %WDPos;)*>
+<!ATTLIST O:WDVWMCDENTITY
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- RELATION																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMCDRELATIONSHIP (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMCDPROPERTIES | L:WDMCDRELATIONSHIPLINKS | L:WDSTATES)*>
+<!ATTLIST O:WDMCDRELATIONSHIP
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMCDRELATIONSHIP (O:WDMCDRELATIONSHIP | %WDPos;)*>
+<!ATTLIST O:WDVWMCDRELATIONSHIP
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- PROPRIETES																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMCDPROPERTY (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | L:WDMCDPROPERTIES | L:WDVALUES | P:ISIDENT | P:ISREQUIRED | P:MODIFIABLE | P:MODIFIEDON | P:DATATYPE | P:TABLECODENAME)*>
+<!ATTLIST O:WDMCDPROPERTY
+	%WDelement.att; 
+	%WDelement.cont; 
+>
+<!--	_______________________________________________________________ -->
+<!-- LIEN DE RELATION															-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMCDRELATIONSHIPLINK (%WDFeaturesShort; | P:CARDINALITY | P:ESTIMATEDCARD | P:ISDEFINITIVE | P:ISLOCKED | P:ISRELATIVEIDENT | O:WDMCDENTITY | O:WDMCDRELATIONSHIP | P:ISESTIMATED)*>
+<!ATTLIST O:WDMCDRELATIONSHIPLINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- HERITAGE																	-->
+<!--	_______________________________________________________________ -->
+<!--	Héritage -->
+<!ELEMENT O:WDMCDINHERITANCE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:OPERATOR | P:TYPETRANSFO | P:ISGENERATESQLVIEW | O:WDMCDPROPERTY | O:WDMCDRELATIONSHIP | L:WDMCDINHERITANCELINKS | L:WDMCDCONSTRAINTLINKS | O:WDRULE | O:WDMCDPROPERTY)*>
+<!ATTLIST O:WDMCDINHERITANCE
+	%WDelement.att; 
+	RELATION NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMCDINHERITANCEENT (O:WDMCDINHERITANCE | %WDPos;)*>
+<!ATTLIST O:WDVWMCDINHERITANCEENT
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMCDINHERITANCEREL (O:WDMCDINHERITANCE | %WDPos;)*>
+<!ATTLIST O:WDVWMCDINHERITANCEREL
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	lien d'héritage -->
+<!ELEMENT O:WDMCDINHERITANCELINK (%WDFeaturesShort; | O:WDMCDINHERITANCE | O:WDMCDRELATIONSHIP | O:WDMCDENTITY | P:ISSURTYPE)*>
+<!ATTLIST O:WDMCDINHERITANCELINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- CONTRAINTE																-->
+<!--	_______________________________________________________________ -->
+<!--	Contrainte inter relations -->
+<!ELEMENT O:WDMCDCONSTRAINTINTERREL (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FAMILY | P:RULETYPE | P:CONCEPTUALDESCR | P:LOGICALDESCR | P:OPERATOR | L:WDMCDCONSTRAINTLINKS)*>
+<!ATTLIST O:WDMCDCONSTRAINTINTERREL
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMCDCONSTRAINTINTERREL (O:WDMCDCONSTRAINTINTERREL | %WDPos;)*>
+<!ATTLIST O:WDVWMCDCONSTRAINTINTERREL
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Contrainte de spécialisation -->
+<!ELEMENT O:WDMCDCONSTRAINTSPEC (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FAMILY | P:RULETYPE | P:CONCEPTUALDESCR | P:LOGICALDESCR | P:OPERATOR | L:WDMCDCONSTRAINTLINKS)*>
+<!ATTLIST O:WDMCDCONSTRAINTSPEC
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMCDCONSTRAINTSPEC (O:WDMCDCONSTRAINTSPEC | %WDPos;)*>
+<!ATTLIST O:WDVWMCDCONSTRAINTSPEC
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Contrainte d'unicité -->
+<!ELEMENT O:WDMCDCONSTRAINTUNI (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FAMILY | P:RULETYPE | P:CONCEPTUALDESCR | P:LOGICALDESCR | L:WDMCDCONSTRAINTLINKS)*>
+<!ATTLIST O:WDMCDCONSTRAINTUNI
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMCDCONSTRAINTUNI (O:WDMCDCONSTRAINTUNI | %WDPos;)*>
+<!ATTLIST O:WDVWMCDCONSTRAINTUNI
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	lien Contrainte -->
+<!ELEMENT O:WDMCDCONSTRAINTLINK (O:WDMCDINHERITANCE | O:WDMCDCONSTRAINTINTERREL | O:WDMCDCONSTRAINTUNI | O:WDMCDCONSTRAINTSPEC | O:WDMCDENTITY | O:WDMCDRELATIONSHIP | P:ANNOTATION | P:CONSTRAINT | P:DESCRIPTION | P:MODIFIABLE | P:NOTE | P:VISIBILITY | P:ISTARGET)*>
+<!ATTLIST O:WDMCDCONSTRAINTLINK
+	%WDelement.att; 
+>
+<!--	Liste -->
+<!ELEMENT L:WDMCDCONSTRAINTLINKS (O:WDMCDCONSTRAINTLINK*)>
+<!ELEMENT L:WDMCDRELATIONSHIPLINKS (O:WDMCDRELATIONSHIPLINK*)>
+<!ELEMENT L:WDMCDPROPERTIES (O:WDMCDPROPERTY*)>
+<!ELEMENT L:WDMCDINHERITANCELINKS (O:WDMCDINHERITANCELINK)*>
+<!--	_______________________________________________________________ -->
+<!-- 																				-->
+<!-- 			*** OBJETS DU MLR ***												-->
+<!-- 																				-->
+<!--	_______________________________________________________________ -->
+<!--	_______________________________________________________________ -->
+<!-- TABLE																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRTABLE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMLRAKS | L:WDMLRATTRIBUTES | L:WDMLRFKS | L:WDMLRINDEXES | L:WDSTATES | O:WDMLRPK | O:WDMLRSTORAGE | O:WDMLRTABLESPACE)*>
+<!ATTLIST O:WDMLRTABLE
+	%WDelement.att; 
+	OBJ (FKTABLE | PKTABLE) #IMPLIED
+>
+<!ELEMENT O:WDVWMLRTABLE (O:WDMLRTABLE | %WDPos;)*>
+<!ATTLIST O:WDVWMLRTABLE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- VUE SQL																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRSQLVIEW (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMLRATTRIBUTES | P:USEDTYPE | P:ISWITHCHECKOPTION | P:VIEWTEXT | P:ISQUERY)*>
+<!ATTLIST O:WDMLRSQLVIEW
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMLRSQLVIEW (O:WDMLRSQLVIEW | %WDPos;)*>
+<!ATTLIST O:WDVWMLRSQLVIEW
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- STORAGE & TABLESPACE													-->
+<!--	_______________________________________________________________ -->
+<!-- Storage -->
+<!ELEMENT O:WDMLRSTORAGE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDOPTIONS)*>
+<!ATTLIST O:WDMLRSTORAGE
+	%WDelement.att; 
+>
+<!-- Tablespace  -->
+<!ELEMENT O:WDMLRTABLESPACE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDOPTIONS)*>
+<!ATTLIST O:WDMLRTABLESPACE
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- LISTES DU MLR 																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDMLRAKS (O:WDMLRAK)*>
+<!ELEMENT L:WDMLRATTRIBUTES (O:WDMLRATTRIBUTE)*>
+<!ELEMENT L:WDMLRFKJOINTS (O:WDMLRFKJOINT)*>
+<!ELEMENT L:WDMLRFKS (O:WDMLRFK)*>
+<!ELEMENT L:WDMLRINDEXATTRIBUTES (O:WDMLRINDEXATTRIBUTE)*>
+<!ELEMENT L:WDMLRINDEXES (O:WDMLRINDEX)*>
+<!ELEMENT L:WDSTATES (O:WDSTATE)*>
+<!ELEMENT O:WDMLRFKJOINT (O:WDMLRATTRIBUTE)*>
+<!ELEMENT O:WDMLRINDEXATTRIBUTE (P:ISASCENDANT | O:WDMLRATTRIBUTE)*>
+<!ELEMENT O:WDSTATE (P:CODE | P:DESCRIPTION | L:WDVALUES)*>
+<!--	_______________________________________________________________ -->
+<!-- CLE PRIMAIRE																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRPK (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:ISIDENT | P:ISREQUIRED | P:DATATYPE | L:WDMLRATTRIBUTES)*>
+<!ATTLIST O:WDMLRPK
+	%WDelement.att; 
+	%WDelement.cont; 
+>
+<!--	_______________________________________________________________ -->
+<!-- CLE ALTERNATIVE															-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRAK (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:ISIDENT | P:ISREQUIRED | P:ISUNIQUE | P:DATATYPE | P:TYPEINDEX | O:WDMLRSTORAGE | O:WDMLRTABLESPACE | L:WDMLRATTRIBUTES)*>
+<!ATTLIST O:WDMLRAK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- CLE ETRANGERE															-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRFK (%WDFeaturesShort; | P:ALIAS | P:OPTIONS | P:ISREQUIRED | P:ISNOTIMPLEMENTED | O:WDMLRTABLE | L:WDMLRFKJOINTS)*>
+<!ATTLIST O:WDMLRFK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- INDEX																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRINDEX (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:ISIDENT | P:ISREQUIRED | P:DATATYPE | P:ISUNIQUE | P:TYPEINDEX | O:WDMLRSTORAGE | O:WDMLRTABLESPACE | L:WDMLRINDEXATTRIBUTES | O:WDMLRINDEXASSOBJ)*>
+<!ATTLIST O:WDMLRINDEX
+	%WDelement.att; 
+>
+<!ELEMENT O:WDMLRINDEXASSOBJ (%WDObjet;)*>
+<!--	_______________________________________________________________ -->
+<!-- ATTRIBUT DE TABLE														-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRATTRIBUTE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:DATATYPE | P:ISIDENT | P:ISREQUIRED | L:WDMLRATTRIBUTES | L:WDVALUES)*>
+<!ATTLIST O:WDMLRATTRIBUTE
+	%WDelement.att; 
+	%WDelement.cont; 
+	OBJ (FKTABLE | PKTABLE) #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- MAQUETTE													-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMLRMAQUETTE (P:MODELCODE)*>
+<!ATTLIST O:WDMLRMAQUETTE
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMLRMAQUETTE (O:WDMLRMAQUETTE | %WDPos;)*>
+<!ATTLIST O:WDVWMLRMAQUETTE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- 																				-->
+<!-- 			*** OBJETS DU MGA ***												-->
+<!-- 																				-->
+<!--	_______________________________________________________________ -->
+<!--	_______________________________________________________________ -->
+<!-- EVENT																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAEVENT (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMGAFLUXINS | L:WDMGAFLUXOUTS | P:ACTORSUBTYPE | P:ISINTERNAL | P:TYPESUPPORT | P:FREQUENCY | P:TIMEUNIT | P:EVENTTYPE | P:TRIGGERTYPE | L:WDMGAEVENTRIGGERS)*>
+<!ATTLIST O:WDMGAEVENT
+	%WDelement.att; 
+>
+<!ELEMENT O:WDMGAEVENTTRIGGER (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:TRIGGERTYPE | P:DATATYPE | P:ISIDENT | P:ISREQUIRED | P:ISSTATIC | P:ISPERSISTANT | P:ISDERIVED | L:WDVALUES | L:WDMGAFLUXINS | L:WDMGAFLUXOUTS | P:ACTORSUBTYPE | P:ISINTERNAL | O:WDMGATRIGGERLINK)*>
+<!ATTLIST O:WDMGAEVENTTRIGGER
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGAEVENT (O:WDMGAEVENT | %WDPos;)*>
+<!ATTLIST O:WDVWMGAEVENT
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDMGATRIGGERLINK (%WDFeaturesShort; | %WDFeaturesMLO; | P:MULTIPLICITY | P:AGREGATION | P:ISNAVIGABLE | P:SORT | P:TARGETSCOPE | O:WDRULE | O:WDMGAMESSAGE | O:WDMGAEVENTTRIGGER | O:WDMGASTATE)*>
+<!ATTLIST O:WDMGATRIGGERLINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- DECISION																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGADECISION (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMGAFLUXINS | L:WDMGAFLUXOUTS | P:ACTORSUBTYPE | P:ISINTERNAL | P:EXPRESSIONCOURTE | P:EXPRESSION | L:WDMGACONDITIONS)*>
+<!ATTLIST O:WDMGADECISION
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGADECISION (O:WDMGADECISION | %WDPos;)*>
+<!ATTLIST O:WDVWMGADECISION
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDMGADECISIONCONDITION (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:DATATYPE | P:ISIDENT | P:ISREQUIRED | P:ISSTATIC | P:ISPERSISTANT | P:ISDERIVED | L:WDVALUES | O:WDMGACONDITIONLINK | P:ACTORSUBTYPE | P:ISINTERNAL | P:ISDEFAULT | P:OUTCONDITION | P:PERCENTAPP)*>
+<!ATTLIST O:WDMGADECISIONCONDITION
+	%WDelement.att; 
+>
+<!ELEMENT O:WDMGACONDITIONLINK (%WDFeaturesShort; | %WDFeaturesMLO; | P:MULTIPLICITY | P:AGREGATION | P:ISNAVIGABLE | P:SORT | P:TARGETSCOPE | O:WDMGAEVENT | O:WDMGAACTIVITY | O:WDMGADECISION | O:WDMGADECISIONCONDITION | O:WDMGASTATE | %WDObjet;)*>
+<!ATTLIST O:WDMGACONDITIONLINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- MESSAGE																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAMESSAGE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:TYPESUPPORT | P:FREQUENCY | P:TIMEUNIT | O:WDEXTERNALVIEW | L:WDMGAFLUXOUTS | L:WDMGAFLUXINS)*>
+<!ATTLIST O:WDMGAMESSAGE
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGAMESSAGE (O:WDMGAMESSAGE | %WDPos;)*>
+<!ATTLIST O:WDVWMGAMESSAGE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- DOMAINE																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGADOMAIN (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMGAFLUXINS | L:WDMGAFLUXOUTS | P:ACTORSUBTYPE | P:ISINTERNAL)*>
+<!ATTLIST O:WDMGADOMAIN
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGADOMAIN (O:WDMGADOMAIN | %WDPos;)*>
+<!ATTLIST O:WDVWMGADOMAIN
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- VUE DE DONNEES															-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGADATAVIEW (P:SHORTCUT | P:SOURCE)*>
+<!ATTLIST O:WDMGADATAVIEW
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGADATAVIEW (O:WDMGADATAVIEW | %WDPos;)*>
+<!ATTLIST O:WDVWMGADATAVIEW
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!ELEMENT L:WDMGADATAVIEWLINKS (O:WDMGADATAVIEWLINK)*>
+<!ELEMENT O:WDMGADATAVIEWLINK (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | O:WDMGADATAVIEW | L:WDMGAACTIONS | P:ISREAD | P:ISMAJ | P:ISDELETE | P:ISCREATE)*>
+<!ATTLIST O:WDMGADATAVIEWLINK
+	%WDelement.att; 
+>
+<!ELEMENT L:WDMGAACTIONS (O:WDMGAACTION)*>
+<!ELEMENT O:WDMGAACTION (P:SOURCE | P:ISREAD | P:ISMAJ | P:ISDELETE | P:ISCREATE)*>
+<!--	_______________________________________________________________ -->
+<!-- MAQUETTE																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAMAQUETTE (P:MODELCODE*)>
+<!ATTLIST O:WDMGAMAQUETTE
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGAMAQUETTE (O:WDMGAMAQUETTE | %WDPos;)*>
+<!ATTLIST O:WDVWMGAMAQUETTE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- LISTES																	-->
+<!--	_______________________________________________________________ -->
+<!--	Listes -->
+<!ELEMENT L:WDMGAFLUXINS (O:WDMGAFLUX)*>
+<!ELEMENT L:WDMGAFLUXOUTS (O:WDMGAFLUX)*>
+<!ELEMENT L:WDMGAACTIVITIES (O:WDMGAACTIVITY)*>
+<!ELEMENT L:WDMGAEMISSIONS (O:WDMGAEMISSIONRULE)*>
+<!ELEMENT L:WDMGAEVENTRIGGEROUTS (O:WDMGAEVENTTRIGGER)*>
+<!ELEMENT L:WDMGAEVENTRIGGERS (O:WDMGAEVENTTRIGGER)*>
+<!ELEMENT L:WDMGACONDITIONS (O:WDMGADECISIONCONDITION)*>
+<!--	_______________________________________________________________ -->
+<!-- REGLE D'EMISSION															-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAEMISSIONRULE (P:PERCENTAPP, P:ISSUBRULE, P:CHILDNB)>
+<!ATTLIST O:WDMGAEMISSIONRULE
+	NAME CDATA #REQUIRED
+>
+<!--	_______________________________________________________________ -->
+<!-- ACTIVITE																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAACTIVITY (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:SYNCHRO | P:DETAIL | P:FREQUENCY | P:DURATION | P:ACTIVITYSUBTYPE | P:AUTOMATION | P:DELAY | P:MODE | P:LEVEL | P:TIMEUNIT | P:ACTORSUBTYPE | P:ISINTERNAL | L:WDMGAEMISSIONS | L:WDMGAFLUXINS | L:WDMGAFLUXOUTS | L:WDMGADATAVIEWLINKS)*>
+<!ATTLIST O:WDMGAACTIVITY
+	ACTIVITYTYPE CDATA #REQUIRED
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGAACTIVITY (O:WDMGAACTIVITY | %WDPos;)*>
+<!ATTLIST O:WDVWMGAACTIVITY
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- ACTEUR																	-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAACTOR (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISINTERNAL | P:ACTORSUBTYPE | L:WDMGAFLUXOUTS | L:WDMGAFLUXINS)*>
+<!ATTLIST O:WDMGAACTOR
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGAACTOR (O:WDMGAACTOR | %WDPos;)*>
+<!ATTLIST O:WDVWMGAACTOR
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- POSTE																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGAPOSTE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMGAACTIVITIES)*>
+<!ATTLIST O:WDMGAPOSTE
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGAPOSTE (O:WDMGAPOSTE | %WDPos;)*>
+<!ATTLIST O:WDVWMGAPOSTE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- ETAT																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDMGASTATE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:STATETYPE | P:STATEOBJECT | P:STATEDESCRIPTION | P:TYPESUPPORT | P:FREQUENCY | P:TIMEUNIT | L:WDMGAFLUXOUTS | L:WDMGAFLUXINS)*>
+<!ATTLIST O:WDMGASTATE
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMGASTATE (O:WDMGASTATE | %WDPos;)*>
+<!ATTLIST O:WDVWMGASTATE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- FLUX																		-->
+<!--	_______________________________________________________________ -->
+<!--	Flux -->
+<!ELEMENT O:WDMGAFLUX (%WDFeaturesShort; | %WDFeaturesMLO; | %WDFeaturesMLR; | O:WDMGAACTIVITY | O:WDMGAACTOR | O:WDMGADOMAIN | O:WDMGAEVENT | O:WDMGADECISION | O:WDMGAMESSAGE | O:WDMGASTATE | P:OUTCONDITION | O:WDRENVOI)*>
+<!ATTLIST O:WDMGAFLUX
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- 																				-->
+<!-- 			*** OBJETS DU MLO ***												-->
+<!-- 																				-->
+<!--	_______________________________________________________________ -->
+<!--	_______________________________________________________________ -->
+<!-- CLASSIFIERS : CLASSE ET INTERFACE										-->
+<!--	_______________________________________________________________ -->
+<!-- Liste des classifiers internes -->
+<!ELEMENT L:WDMLOCLASSIFIERS (O:WDMLOCLASS)*>
+<!-- Liste des enfants -->
+<!ELEMENT L:WDCHILDREN (O:WDMLOCLASS* | O:WDMLOPACKAGE*)>
+<!-- Liste des parents -->
+<!ELEMENT L:WDPARENTS (O:WDMLOCLASS* | O:WDMLOPACKAGE*)>
+<!-- Classe-->
+<!ELEMENT O:WDMLOCLASS (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISABSTRACT | P:ISPERSISTANT | P:ISROOT | P:ISTERMINAL | P:CLASSTYPE | P:GROUP | L:WDMLOATTRIBUTES | L:WDMLOOPERATIONS | L:WDMLOCLASSIFIERS | L:WDPARENTS | L:WDCHILDREN | L:WDMLOINTERFACES | L:WDCOMMENTSCONSTRAINTS | L:WDMLOASSOCIATIONS | L:WDMLODEPENDENCIES | O:WDMLOASSOCIATION | O:WDMLOCLASS | L:WDMLOCLASSASSOLINKS)*>
+<!ATTLIST O:WDMLOCLASS
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOCLASS (O:WDMLOCLASS | %WDPos;)*>
+<!ATTLIST O:WDVWMLOCLASS
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!-- Lien de réalisation -->
+<!ELEMENT L:WDMLOREALIZES (O:WDMLOCLASS*)>
+<!--	Liste Interfaces -->
+<!ELEMENT L:WDMLOINTERFACES (O:WDMLOINTERFACE+)>
+<!--	Interface -->
+<!ELEMENT O:WDMLOINTERFACE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISABSTRACT | P:INTERFACETYPE | L:WDMLOOPERATIONS | L:WDMLOREALIZES)*>
+<!ATTLIST O:WDMLOINTERFACE
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOINTERFACE (O:WDMLOINTERFACE | %WDPos;)*>
+<!ATTLIST O:WDVWMLOINTERFACE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	UseCase -->
+<!ELEMENT O:WDMLOUSECASE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISABSTRACT | L:WDMLOATTRIBUTES | L:WDMLOOPERATIONS)*>
+<!ATTLIST O:WDMLOUSECASE
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOUSECASE (O:WDMLOUSECASE | %WDPos;)*>
+<!ATTLIST O:WDVWMLOUSECASE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Acteur -->
+<!ELEMENT O:WDMLOACTEUROBJ (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISABSTRACT | L:WDMLOATTRIBUTES | L:WDMLOOPERATIONS | L:WDMLOMESSAGEOBJS | L:WDMLOCOLLABORATIONLINKS)*>
+<!ATTLIST O:WDMLOACTEUROBJ
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOACTEUROBJ (O:WDMLOACTEUROBJ | %WDPos;)*>
+<!ATTLIST O:WDVWMLOACTEUROBJ
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Objet -->
+<!ELEMENT O:WDMLOOBJETBASECLASSE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISABSTRACT | L:WDMLOATTRIBUTES | L:WDMLOOPERATIONS | L:WDMLOMESSAGEOBJS | L:WDMLOPERIODES | P:BASECLASSE | P:ROLE | P:ISMULTIPLE | L:WDMLOCOLLABORATIONLINKS)*>
+<!ATTLIST O:WDMLOOBJETBASECLASSE
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOOBJETBASECLASSE (%WDPos; | O:WDMLOOBJETBASECLASSE)*>
+<!ATTLIST O:WDVWMLOOBJETBASECLASSE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Periode -->
+<!ELEMENT L:WDMLOPERIODES (O:WDMLOPERIODE)*>
+<!ELEMENT O:WDMLOPERIODE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:TIMESCALE)*>
+<!ATTLIST O:WDMLOPERIODE
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOPERIODE (O:WDMLOPERIODE | %WDPos; | P:VIEWEROBJETBASECLASSE)*>
+<!ATTLIST O:WDVWMLOPERIODE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- ATTRIBUTS																	-->
+<!--	_______________________________________________________________ -->
+<!--	Liste Attributs -->
+<!ELEMENT L:WDMLOATTRIBUTES (O:WDMLOATTRIBUTE)*>
+<!--	Attribut -->
+<!ELEMENT O:WDMLOATTRIBUTE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:DATATYPE | P:ISIDENT | P:ISREQUIRED | P:ISSTATIC | P:ISPERSISTANT | P:ISDERIVED | L:WDVALUES | L:WDMLOATTRIBUTES)*>
+<!ATTLIST O:WDMLOATTRIBUTE
+	%WDelement.cont; 
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- OPERATIONS ET PARAMETRES												-->
+<!--	_______________________________________________________________ -->
+<!--	Liste opération -->
+<!ELEMENT L:WDMLOOPERATIONS (O:WDMLOOPERATION)*>
+<!--	Opération -->
+<!ELEMENT O:WDMLOOPERATION (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FAMILY | P:RULETYPE | P:CONCEPTUALDESCR | P:LOGICALDESCR | P:ISABSTRACT | P:ISSTATIC | P:DATATYPE | L:WDMLOATTRIBUTES | L:WDMLOOPERATIONS | L:WDMLOPARAMS)*>
+<!ATTLIST O:WDMLOOPERATION
+	%WDelement.cont; 
+	%WDelement.att; 
+>
+<!--	Liste parametre -->
+<!ELEMENT L:WDMLOPARAMS (O:WDMLOPARAM)*>
+<!--	parametre -->
+<!ELEMENT O:WDMLOPARAM (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:DATATYPE | P:PARAMTYPE | P:ISIDENT | P:ISREQUIRED | P:MULTIPLICITY | L:WDVALUES)*>
+<!ATTLIST O:WDMLOPARAM
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- ASSOCIATION																-->
+<!--	_______________________________________________________________ -->
+<!--	Liste association -->
+<!ELEMENT L:WDMLOASSOCIATIONS (O:WDMLOASSOCIATION*)>
+<!--	Liste association end -->
+<!ELEMENT L:WDMLOASSOENDS (O:WDMLOASSOEND*)>
+<!--	Liste classe asso -->
+<!ELEMENT L:WDMLOCLASSASSOLINKS (O:WDMLOCLASSASSOLINK*)>
+<!--	Association -->
+<!ELEMENT O:WDMLOASSOCIATION (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | O:WDMLOCLASS | L:WDCOMMENTSCONSTRAINTS | L:WDMLOASSOENDS | L:WDMLOCLASSASSOLINKS)*>
+<!ATTLIST O:WDMLOASSOCIATION
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMLOASSOCIATION (O:WDMLOASSOCIATION | %WDPos;)*>
+<!ATTLIST O:WDVWMLOASSOCIATION
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Association end -->
+<!ELEMENT O:WDMLOASSOEND (%WDFeaturesShort; | %WDFeaturesMLO; | P:MULTIPLICITY | P:AGREGATION | P:ISNAVIGABLE | P:SORT | P:TARGETSCOPE | O:WDMLOCLASS | O:WDMLOASSOCIATION | O:WDMLOUSECASE | O:WDMLOACTEUROBJ)*>
+<!ATTLIST O:WDMLOASSOEND
+	%WDelement.att; 
+>
+<!--	Association end -->
+<!ELEMENT O:WDMLOCLASSASSOLINK (%WDFeaturesShort; | %WDFeaturesMLO; | P:MULTIPLICITY | P:AGREGATION | P:ISNAVIGABLE | P:SORT | P:TARGETSCOPE | O:WDMLOCLASS | O:WDMLOASSOCIATION)*>
+<!ATTLIST O:WDMLOCLASSASSOLINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- DEPENDANCE																-->
+<!--	_______________________________________________________________ -->
+<!--	Liste dependance -->
+<!ELEMENT L:WDMLODEPENDENCIES (O:WDMLODEPENDENCY*)>
+<!--	Liste dependants -->
+<!ELEMENT L:WDMLODEPENDENTS (O:WDMLOCLASS | O:WDMLOPACKAGE | O:WDMLOINTERFACE | O:WDMLOUSECASE | O:WDMLOACTEUROBJ)*>
+<!--	Liste influent -->
+<!ELEMENT L:WDMLOINFLUENTS (O:WDMLOCLASS | O:WDMLOPACKAGE | O:WDMLOINTERFACE | O:WDMLOUSECASE | O:WDMLOACTEUROBJ)*>
+<!--	Dependance -->
+<!ELEMENT O:WDMLODEPENDENCY (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDMLOINFLUENTS | L:WDMLODEPENDENTS)*>
+<!ATTLIST O:WDMLODEPENDENCY
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWMLODEPENDENCY (O:WDMLODEPENDENCY | %WDPos;)*>
+<!ATTLIST O:WDVWMLODEPENDENCY
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- GENERALISATION										-->
+<!--	_______________________________________________________________ -->
+<!--	Généralisation -->
+<!ELEMENT O:WDGENERALIZATION (%WDFeatures; | %WDFeaturesShort; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:DISCRIMINATOR | %WDObjet;)*>
+<!ATTLIST O:WDGENERALIZATION
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- PATTEMESSAGEOBJ														-->
+<!--	_______________________________________________________________ -->
+<!--	Message -->
+<!ELEMENT O:WDMLOMESSAGEOBJ (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | O:WDMLOOBJETBASECLASSE | O:WDMLOACTEUROBJ | P:HEIGHT | P:ACTION | P:ARGUMENT | P:SEQUENCE | P:OPERATION | O:WDMLOCOLLABORATIONLINK)*>
+<!ATTLIST O:WDMLOMESSAGEOBJ
+	%WDelement.att; 
+	MESSAGETYPE CDATA #IMPLIED
+>
+<!-- Liste -->
+<!ELEMENT L:WDMLOMESSAGEOBJS (O:WDMLOMESSAGEOBJ)*>
+<!ELEMENT O:WDVWMLOMESSAGEOBJ (O:WDMLOMESSAGEOBJ | %WDPos;)*>
+<!ATTLIST O:WDVWMLOMESSAGEOBJ
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- PATTECOLLABORATION														-->
+<!--	_______________________________________________________________ -->
+<!--	Message -->
+<!ELEMENT O:WDMLOCOLLABORATIONLINK (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | O:WDMLOOBJETBASECLASSE | O:WDMLOACTEUROBJ | L:WDMLOMESSAGEOBJS | L:WDOBJECTS | P:SHORTCUT | P:ASSOCIATION)*>
+<!ATTLIST O:WDMLOCOLLABORATIONLINK
+	%WDelement.att; 
+	MESSAGETYPE CDATA #IMPLIED
+>
+<!-- Liste -->
+<!ELEMENT L:WDMLOCOLLABORATIONLINKS (O:WDMLOCOLLABORATIONLINK)*>
+<!ELEMENT O:WDVWMLOCOLLABORATIONLINK (O:WDMLOCOLLABORATIONLINK | %WDPos;)*>
+<!ATTLIST O:WDVWMLOMESSAGEOBJ
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- PACKAGE																	-->
+<!--	_______________________________________________________________ -->
+<!--	Package -->
+<!ELEMENT O:WDMLOPACKAGE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:ISNSMASTERUSEPACKAGE | P:ISNSPACKAGEUSEMASTER | P:COMPOSITION | P:ISUSED | L:WDCHILDREN | L:WDPARENTS | L:WDMLODEPENDENCIES)*>
+<!ATTLIST O:WDMLOPACKAGE
+	%WDelement.att; 
+	OBJ NMTOKEN #IMPLIED
+>
+<!ELEMENT O:WDVWMLOPACKAGE (O:WDMLOPACKAGE | %WDPos;)*>
+<!ATTLIST O:WDVWMLOPACKAGE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- 																				-->
+<!-- 			*** OBJETS COMMUN ***												-->
+<!-- 																				-->
+<!--	_______________________________________________________________ -->
+<!--	_______________________________________________________________ -->
+<!-- FICHIERS ATTACHES														-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDLINKEDFILES (O:WDFILEGROUP | O:WDLINKEDFILE)*>
+<!ELEMENT O:WDFILEGROUP (P:DESCRIPTION | L:WDLINKEDFILES)*>
+<!ATTLIST O:WDFILEGROUP
+	NAME CDATA #REQUIRED
+	FILETYPE CDATA #IMPLIED
+>
+<!ELEMENT O:WDLINKEDFILE (P:DESCRIPTION | P:LINKEDFILE | P:RELLINKEDFILE | P:SHORTCUTTYPE)*>
+<!ATTLIST O:WDLINKEDFILE
+	NAME CDATA #REQUIRED
+	FILETYPE CDATA #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- CARACTERISTIQUES ETENDUES												-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDCARETENDUES (O:WDCARETENDUE | O:WDCARETENDUEGROUPE)*>
+<!ELEMENT O:WDCARETENDUEGROUPE (L:WDCARETENDUES)*>
+<!ATTLIST O:WDCARETENDUEGROUPE
+	NAME CDATA #REQUIRED
+>
+<!ELEMENT O:WDCARETENDUE (P:CARVALUE)*>
+<!ATTLIST O:WDCARETENDUE
+	NAME CDATA #REQUIRED
+	CARID CDATA #IMPLIED
+>
+<!ELEMENT P:CARVALUE (#PCDATA)>
+<!ATTLIST P:CARVALUE
+	CARTYPE CDATA #REQUIRED
+>
+<!--	_______________________________________________________________ -->
+<!-- RENVOI																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDRENVOI (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:TYPESUPPORT | P:FREQUENCY | P:TIMEUNIT | P:ISDIRECTACCESS | P:TARGETLINK | L:WDRENVOILINKEDOBJECTS | L:WDMGAFLUXINS)*>
+<!ATTLIST O:WDRENVOI
+	%WDelement.att;
+	%WDelement.ol;
+>
+<!ELEMENT O:WDVWRENVOI (O:WDRENVOI | %WDPos;)*>
+<!ATTLIST O:WDVWRENVOI
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!ELEMENT L:WDRENVOILINKEDOBJECTS (O:WDRENVOILINK)*>
+<!ELEMENT L:WDRENVOILINKS (O:WDRENVOILINK)*>
+<!ELEMENT O:WDRENVOILINK (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FLECHE_1 | P:FLECHE_2 | P:OUTCONDITION | %WDObjet; | P:LIBELLE | P:ROLEA | P:ROLEB | P:TARGETLINK | L:WDOBJECTS)*>
+<!ATTLIST O:WDRENVOILINK
+	%WDelement.att; 
+	%WDelement.ol;
+>
+
+
+<!--	_______________________________________________________________ -->
+<!-- REGLE																		-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDRULE (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FAMILY | P:RULETYPE | P:CONCEPTUALDESCR | P:LOGICALDESCR | P:IMPLEMENTATION | L:WDRULELINKSUSED | L:WDMGAEVENTRIGGEROUTS)*>
+<!ATTLIST O:WDRULE
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWRULE (O:WDRULE | %WDPos;)*>
+<!ATTLIST O:WDVWRULE
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Lien vers une regle -->
+<!ELEMENT O:WDRULELINK (%WDFeatures; | %WDFeaturesMLO; | P:ISINPUT | P:ISOUTPUT | P:ISEXECUTE | P:ISPARAMETER | P:ISRETURN | O:WDDATAITEM | O:WDMLRATTRIBUTE | O:WDMLRTABLE | O:WDRULE | O:WDMCDPROPERTY)*>
+<!ATTLIST O:WDRULELINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- VUE EXTERNE																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDEXTERNALVIEW (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | P:FAMILY | L:WDELEMENTS)*>
+<!ATTLIST O:WDEXTERNALVIEW
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWEXTERNALVIEW (O:WDEXTERNALVIEW | %WDPos;)*>
+<!ATTLIST O:WDVWEXTERNALVIEW
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- GROUPE VUE EXTERNE																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDGROUPEXTERNALVIEW (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:ISIDENT | P:ISREQUIRED | P:DATATYPE | L:WDELEMENTS)*>
+<!ATTLIST O:WDGROUPEXTERNALVIEW
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWGROUPEXTERNALVIEW (O:WDGROUPEXTERNALVIEW | %WDPos;)*>
+<!ATTLIST O:WDVWGROUPEXTERNALVIEW
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- GROUPE																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDGROUPATTRIBUTE (O:WDDATAITEM | O:WDGROUPEXTERNALVIEW | O:WDMLRATTRIBUTE | P:CARDINALITY | O:WDMCDPROPERTY)*>
+<!--	_______________________________________________________________ -->
+<!-- INFORMATION																-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT L:WDDATAITEMS (O:WDDATAITEM)*>
+<!ELEMENT O:WDDATAITEM (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | %WDDomaineValeur; | P:ISIDENT | P:ISREQUIRED | P:DATATYPE | L:WDDATAITEMS | L:WDVALUES)*>
+<!ATTLIST O:WDDATAITEM
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWDATAITEM (O:WDDATAITEM | %WDPos;)*>
+<!ATTLIST O:WDVWDATAITEM
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- OBJET CONTRAINTE ET COMMENTAIRE										-->
+<!--	_______________________________________________________________ -->
+<!--	Liste de commentaires ou contraintes -->
+<!ELEMENT L:WDCOMMENTSCONSTRAINTS (O:WDCOMMENT | O:WDCONSTRAINT)*>
+<!--	Commentaire -->
+<!ELEMENT O:WDCOMMENT (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDOBJECTS | P:EXPRESSION)*>
+<!ATTLIST O:WDCOMMENT
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWCOMMENT (O:WDCOMMENT | %WDPos;)*>
+<!ATTLIST O:WDVWCOMMENT
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Contrainte -->
+<!ELEMENT O:WDCONSTRAINT (%WDFeatures; | %WDFeaturesMLO; | %WDFeaturesMLR; | L:WDOBJECTS | P:EXPRESSION)*>
+<!ATTLIST O:WDCONSTRAINT
+	%WDelement.att; 
+>
+<!ELEMENT O:WDVWCONSTRAINT (O:WDCONSTRAINT | %WDPos;)*>
+<!ATTLIST O:WDVWCONSTRAINT
+	ID NMTOKEN #IMPLIED
+	REF NMTOKEN #IMPLIED
+>
+<!--	Lien de commentaires ou contraintes -->
+<!ELEMENT O:WDMLOCOMMENTLINK (%WDFeaturesShort; | %WDObjet; | P:SHORTCUT)*>
+<!ATTLIST O:WDMLOCOMMENTLINK
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- STEREOTYPE																-->
+<!--	_______________________________________________________________ -->
+<!--	Sterotype -->
+<!--	%WDelement.att; ne convient pas pour REF trop contraignant -->
+<!ELEMENT S:WDSTEREOTYPE (P:DESCRIPTION?)>
+<!ATTLIST S:WDSTEREOTYPE
+	ID ID #IMPLIED
+	NAME CDATA #REQUIRED
+	REF CDATA #IMPLIED
+	OBJ CDATA #IMPLIED
+	SOUSTYPE CDATA #IMPLIED
+>
+<!--	_______________________________________________________________ -->
+<!-- RACCOURCIETENDU															-->
+<!--	_______________________________________________________________ -->
+<!ELEMENT O:WDRACCOURCIETENDU (%WDTLink; | P:VALUE | P:GROUP)*>
+<!--	_______________________________________________________________ -->
+<!-- TYPE UTILISATEUR															-->
+<!--	__________________________f_____________________________________ -->
+<!-- Liste des Types utilisateur du modèle -->
+<!ELEMENT L:WDUSERTYPES (O:WDUSERTYPE)*>
+<!-- Types utilisateur du modèle -->
+<!ELEMENT O:WDUSERTYPE (P:DATATYPE | P:MINVALUE | P:MAXVALUE | P:DEFAULT | L:WDVALUES)*>
+<!ATTLIST O:WDUSERTYPE
+	%WDelement.att; 
+>
+<!--	_______________________________________________________________ -->
+<!-- LISTE DE VALEURS															-->
+<!--	_______________________________________________________________ -->
+<!-- Liste de valeurs -->
+<!ELEMENT L:WDVALUES (O:WDVALUE)*>
+<!ELEMENT L:WDOPTIONS (O:WDVALUE)*>
+<!-- Types utilisateur du modèle -->
+<!ELEMENT O:WDVALUE (P:CODE | P:DESCRIPTION)*>
+<!--	_______________________________________________________________ -->
+<!-- OBJETS DIVERS																-->
+<!--	_______________________________________________________________ -->
+<!--	Liste  -->
+<!ELEMENT L:WDRULELINKSUSED (O:WDRULELINK)*>
+<!ELEMENT L:WDELEMENTS (O:WDGROUPATTRIBUTE)*>
+<!-- Elements composés -->
+<!ELEMENT P:VIEWEROBJETBASECLASSE (O:WDVWMLOOBJETBASECLASSE)>
+<!ELEMENT P:DATATYPE (P:NAME | P:TYPE | P:LENGTH | P:PRECISION | P:AUTONUM)*>
+<!ELEMENT P:OBJECTTYPE (O:WDMLOCLASS | O:WDMLOINTERFACE | O:WDMLOASSOCIATION | O:WDMLODEPENDENCY | O:WDGENERALIZATION)>
+<!ELEMENT P:AUTONUM (P:INIT, P:INCR)>
+<!-- Elements TLink -->
+<!ELEMENT P:COMPOSITION (%WDTLink;)*>
+<!ELEMENT P:SHORTCUT (%WDTLink;)*>
+<!ELEMENT P:SOURCE (%WDTLink;)*>
+<!ELEMENT P:BASECLASSE (%WDTLink;)*>
+<!ELEMENT P:TARGETLINK (%WDTLink;)*>
+<!ELEMENT P:OPERATION (%WDTLink;)*>
+<!ELEMENT P:ASSOCIATION (%WDTLink;)*>
+<!-- Element utilisant BR : type libellé-->
+<!ELEMENT BR EMPTY>
+<!ELEMENT P:ANNOTATION (#PCDATA | BR)*>
+<!ELEMENT P:CONCEPTUALDESCR (#PCDATA | BR)*>
+<!ELEMENT P:DESCRIPTION (#PCDATA | BR)*>
+<!ELEMENT P:LOGICALDESCR (#PCDATA | BR)*>
+<!ELEMENT P:NOTE (#PCDATA | BR)*>
+<!ELEMENT P:VIEWTEXT (#PCDATA | BR)*>
+<!-- Elements booléens  : 0 ou 1 -->
+<!ELEMENT P:ISABSTRACT (#PCDATA)>
+<!ELEMENT P:ISASCENDANT (#PCDATA)>
+<!ELEMENT P:ISCALCUL (#PCDATA)>
+<!ELEMENT P:ISCASE (#PCDATA)>
+<!ELEMENT P:ISCHECKED (#PCDATA)>
+<!ELEMENT P:ISCREATE (#PCDATA)>
+<!ELEMENT P:ISCURRENT (#PCDATA)>
+<!ELEMENT P:ISDERIVED (#PCDATA)>
+<!ELEMENT P:ISDEFAULT (#PCDATA)>
+<!ELEMENT P:ISDEFINITIVE (#PCDATA)>
+<!ELEMENT P:ISDELETE (#PCDATA)>
+<!ELEMENT P:ISDIRECTACCESS (#PCDATA)>
+<!ELEMENT P:ISEXECUTE (#PCDATA)>
+<!ELEMENT P:ISESTIMATED (#PCDATA)>
+<!ELEMENT P:ISFUTURE (#PCDATA)>
+<!ELEMENT P:ISGENERATESQLVIEW (#PCDATA)>
+<!ELEMENT P:ISHISTORISABLE (#PCDATA)>
+<!ELEMENT P:ISINTERNAL (#PCDATA)>
+<!ELEMENT P:ISIDENT (#PCDATA)>
+<!ELEMENT P:ISINPUT (#PCDATA)>
+<!ELEMENT P:ISLOWER (#PCDATA)>
+<!ELEMENT P:ISLOCKED (#PCDATA)>
+<!ELEMENT P:ISMAJ (#PCDATA)>
+<!ELEMENT P:ISMULTIPLE (#PCDATA)>
+<!ELEMENT P:ISNAVIGABLE (#PCDATA)>
+<!ELEMENT P:ISNOTIMPLEMENTED (#PCDATA)>
+<!ELEMENT P:ISNSMASTERUSEPACKAGE (#PCDATA)>
+<!ELEMENT P:ISNSPACKAGEUSEMASTER (#PCDATA)>
+<!ELEMENT P:ISOUTPUT (#PCDATA)>
+<!ELEMENT P:ISPACKAGE (#PCDATA)>
+<!ELEMENT P:ISPARAMETER (#PCDATA)>
+<!ELEMENT P:ISPERSISTANT (#PCDATA)>
+<!ELEMENT P:ISQUERY (#PCDATA)>
+<!ELEMENT P:ISREAD (#PCDATA)>
+<!ELEMENT P:ISRELATIVEIDENT (#PCDATA)>
+<!ELEMENT P:ISREQUIRED (#PCDATA)>
+<!ELEMENT P:ISRETURN (#PCDATA)>
+<!ELEMENT P:ISROOT (#PCDATA)>
+<!ELEMENT P:ISSUBRULE (#PCDATA)>
+<!ELEMENT P:ISSTABLE (#PCDATA)>
+<!ELEMENT P:ISSTATIC (#PCDATA)>
+<!ELEMENT P:ISTARGET (#PCDATA)>
+<!ELEMENT P:ISSURTYPE (#PCDATA)>
+<!ELEMENT P:ISTERMINAL (#PCDATA)>
+<!ELEMENT P:ISUNIQUE (#PCDATA)>
+<!ELEMENT P:ISUPPER (#PCDATA)>
+<!ELEMENT P:ISUSED (#PCDATA)>
+<!ELEMENT P:ISWITHCHECKOPTION (#PCDATA)>
+<!ELEMENT P:FLECHE_1 (#PCDATA)>
+<!ELEMENT P:FLECHE_2 (#PCDATA)>
+<!-- Elements simples : chaine de caractère -->
+<!ELEMENT P:ACTIVITYSUBTYPE (#PCDATA)>
+<!ELEMENT P:ACTION (#PCDATA)>
+<!ELEMENT P:ACTORSUBTYPE (#PCDATA)>
+<!ELEMENT P:AGREGATION (#PCDATA)>
+<!ELEMENT P:ALIAS (#PCDATA)>
+<!ELEMENT P:ARGUMENT (#PCDATA)>
+<!ELEMENT P:ATTRIBUTEPREFIX (#PCDATA)>
+<!ELEMENT P:AUTHOR (#PCDATA)>
+<!ELEMENT P:AUTOMATION (#PCDATA)>
+<!ELEMENT P:BOTTOM (#PCDATA)>
+<!ELEMENT P:CALCULATEDLENGTH (#PCDATA)>
+<!ELEMENT P:CALCULATEDVOL (#PCDATA)>
+<!ELEMENT P:CARDINALITY (#PCDATA)>
+<!ELEMENT P:CHILDNB (#PCDATA)>
+<!ELEMENT P:CLASSTYPE (#PCDATA)>
+<!ELEMENT P:CODE (#PCDATA)>
+<!ELEMENT P:CONSTRAINT (#PCDATA)>
+<!ELEMENT P:CONSTRAINTNAME (#PCDATA)>
+<!ELEMENT P:CREATEDON (#PCDATA)>
+<!ELEMENT P:DATATION (#PCDATA)>
+<!ELEMENT P:DEFAULT (#PCDATA)>
+<!ELEMENT P:DELAY (#PCDATA)>
+<!ELEMENT P:DETAIL (#PCDATA | BR)*>
+<!ELEMENT P:DISCRIMINATOR (#PCDATA)>
+<!ELEMENT P:DOMAIN (#PCDATA)>
+<!ELEMENT P:DURATION (#PCDATA)>
+<!ELEMENT P:ESTIMATEDCARD (#PCDATA)>
+<!ELEMENT P:ESTIMATEDLENGTH (#PCDATA)>
+<!ELEMENT P:ESTIMATEDVOL (#PCDATA)>
+<!ELEMENT P:EVENTTYPE (#PCDATA)>
+<!ELEMENT P:EXPRESSIONCOURTE (#PCDATA)>
+<!ELEMENT P:EXPRESSION (#PCDATA)>
+<!ELEMENT P:FAMILY (#PCDATA)>
+<!ELEMENT P:FILENAME (#PCDATA)>
+<!ELEMENT P:FORMAT (#PCDATA)>
+<!ELEMENT P:FREQUENCY (#PCDATA)>
+<!ELEMENT P:FREECHAR1 (#PCDATA)>
+<!ELEMENT P:FREECHAR2 (#PCDATA)>
+<!ELEMENT P:FREECHAR3 (#PCDATA)>
+<!ELEMENT P:GROUP (#PCDATA)>
+<!ELEMENT P:HEIGHT (#PCDATA)>
+<!ELEMENT P:IMPLEMENTATION (#PCDATA)>
+<!ELEMENT P:INCR (#PCDATA)>
+<!ELEMENT P:INIT (#PCDATA)>
+<!ELEMENT P:INTERFACETYPE (#PCDATA)>
+<!ELEMENT P:LENGTH (#PCDATA)>
+<!ELEMENT P:LEVEL (#PCDATA)>
+<!ELEMENT P:LEFT (#PCDATA)>
+<!ELEMENT P:LIBELLE (#PCDATA)>
+<!ELEMENT P:MAXVALUE (#PCDATA)>
+<!ELEMENT P:MINVALUE (#PCDATA)>
+<!ELEMENT P:MODE (#PCDATA)>
+<!ELEMENT P:MODELCODE (#PCDATA)>
+<!ELEMENT P:MODELCREATION (#PCDATA)>
+<!ELEMENT P:DIAGRAMCODE (#PCDATA)>
+<!ELEMENT P:DIAGRAMID (#PCDATA)>
+<!ELEMENT P:DIAGRAMCREATION (#PCDATA)>
+<!ELEMENT P:LINKEDFILE (#PCDATA)>
+<!ELEMENT P:MODIFIABLE (#PCDATA)>
+<!ELEMENT P:MODIFIEDON (#PCDATA)>
+<!ELEMENT P:MULTIPLICITY (#PCDATA)>
+<!ELEMENT P:NAME (#PCDATA)>
+<!ELEMENT P:NBOCCUR (#PCDATA)>
+<!ELEMENT P:NBOCCURPRESERVED (#PCDATA)>
+<!ELEMENT P:OBJECTCODE (#PCDATA)>
+<!ELEMENT P:OBJECTID (#PCDATA)>
+<!ELEMENT P:OPERATOR (#PCDATA)>
+<!ELEMENT P:OPTIONS (#PCDATA)>
+<!ELEMENT P:OUTCONDITION (#PCDATA)>
+<!ELEMENT P:PARAMTYPE (#PCDATA)>
+<!ELEMENT P:PERCENTAPP (#PCDATA)>
+<!ELEMENT P:PRECISION (#PCDATA)>
+<!ELEMENT P:RELLINKEDFILE (#PCDATA)>
+<!ELEMENT P:RIGHT (#PCDATA)>
+<!ELEMENT P:ROLEA (#PCDATA)>
+<!ELEMENT P:ROLEB (#PCDATA)>
+<!ELEMENT P:ROLE (#PCDATA)>
+<!ELEMENT P:RULETYPE (#PCDATA)>
+<!ELEMENT P:STATEDESCRIPTION (#PCDATA)>
+<!ELEMENT P:STATEOBJECT (#PCDATA)>
+<!ELEMENT P:STATETYPE (#PCDATA)>
+<!ELEMENT P:SEQUENCE (#PCDATA)>
+<!ELEMENT P:SHORTCUTTYPE (#PCDATA)>
+<!ELEMENT P:SORT (#PCDATA)>
+<!ELEMENT P:SYNCHRO (#PCDATA)>
+<!ELEMENT P:TABLECODENAME (#PCDATA)>
+<!ELEMENT P:TARGETSCOPE (#PCDATA)>
+<!ELEMENT P:TIMEUNIT (#PCDATA)>
+<!ELEMENT P:TIMESCALE (#PCDATA)>
+<!ELEMENT P:TOP (#PCDATA)>
+<!ELEMENT P:TRIGGERTYPE (#PCDATA)>
+<!ELEMENT P:TYPE (#PCDATA)>
+<!ELEMENT P:TYPESUPPORT (#PCDATA)>
+<!ELEMENT P:TYPEINDEX (#PCDATA)>
+<!ELEMENT P:TYPETRANSFO (#PCDATA)>
+<!ELEMENT P:USEDTYPE (#PCDATA)>
+<!ELEMENT P:VALIDATEDON (#PCDATA)>
+<!ELEMENT P:VALUE (#PCDATA)>
+<!ELEMENT P:VALIDATIONAUTHOR (#PCDATA)>
+<!ELEMENT P:VERSION (#PCDATA)>
+<!ELEMENT P:VISIBILITY (#PCDATA)>
+<!ELEMENT P:WORKSPACE (#PCDATA)>
